@@ -15,8 +15,7 @@ columns_to_keep = [
     'total_deaths',
     'new_deaths',
     'total_tests',
-    'new_tests', # Veri setindeki doğru sütun adı
-    'aged_65_older'
+    'new_tests', 
 ]
 
 # ----------------------------------------------------------------------
@@ -31,4 +30,5 @@ df_temiz = df[df['continent'] == hedef_kita].copy()
 df_final = df_temiz[columns_to_keep]
 
 # 5. Yeni veri setini kaydetme
+
 df_final.to_csv(output_file_path, index=False)
